@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.069" height="36.486" viewBox="0 0 32.069 36.486">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_160" data-name="사각형 160" width="32.069" height="36.486" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_226" data-name="그룹 226" clip-path="url(#clip-path)">
+    <path id="패스_210" data-name="패스 210" d="M0,27.774V9.258l6.807-3.93V9.685L3.773,11.437V25.6l1.887,1.089v-2.55H9.432v9.044C6.291,31.369,3.172,29.605,0,27.774M22.637,3.813V33.219l1.415-.817,2.358-1.361V20.4h5.659V16.63H26.41V10.348L28.3,11.437v1.42h3.773v-3.6L22.637,3.813M15.091,16.63h1.887V5.658l-.943-.544-.943.544ZM16.978,20.4H15.091V36.487l-3.773-2.179V2.724L15.091.545,16.035,0l.943.544,3.773,2.178V34.308l-3.773,2.179Z" transform="translate(0 -0.001)" fill="#fff" fill-rule="evenodd"/>
+    <path id="패스_211" data-name="패스 211" d="M3.773,45.3V31.14l3.035-1.752V25.031L0,28.961V47.477c3.172,1.832,6.291,3.595,9.432,5.408V43.841H5.659v2.551Z" transform="translate(0 -19.704)" fill="#fff" fill-rule="evenodd"/>
+    <path id="패스_212" data-name="패스 212" d="M53.181,2.723V34.308l3.773,2.178V20.4h1.886V36.486l3.773-2.178V2.723L58.841.544,57.9,0l-.943.544Zm3.773,13.906V5.658l.943-.545.943.545V16.629Z" transform="translate(-41.863)" fill="#fff" fill-rule="evenodd"/>
+    <path id="패스_213" data-name="패스 213" d="M106.364,17.911V47.318l1.415-.817,2.358-1.361V34.5H115.8V30.728h-5.659V24.446l1.886,1.089v1.42H115.8v-3.6Z" transform="translate(-83.727 -14.099)" fill="#fff" fill-rule="evenodd"/>
+  </g>
+</svg>

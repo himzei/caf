@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import StarRatings from "react-star-ratings";
-import { Button } from "@mui/material";
+import Link from "next/link";
 
 export default function Home() {
   const settings = {
@@ -38,8 +38,8 @@ export default function Home() {
             10:00 ~ 21:00
           </Text>
         </VStack>
-        {/* 구분선 */}
 
+        {/* 구분선 */}
         <Box h="2" w="full" bg="#2F334D" />
 
         {/* 공연 이벤트 */}
@@ -62,43 +62,45 @@ export default function Home() {
               {Array(4)
                 .fill("")
                 .map((_, i) => (
-                  <Box w="190px" h="230px" key={i} cursor={"pointer"}>
-                    <VStack alignItems={"flex-start"} w="full">
-                      <Box
-                        position={"relative"}
-                        bg="blue.400"
-                        rounded="sm"
-                        w="190px"
-                        h="230px"
-                        overflow="hidden"
-                      >
-                        <Image
-                          h="full"
-                          alt="image"
-                          objectFit={"cover"}
-                          src="https://images.unsplash.com/photo-1569949381669-ecf31ae8e613?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3570&q=80"
-                        />
-                        <VStack
-                          spacing="0"
-                          alignItems={"flex-start"}
-                          color="white"
-                          position="absolute"
-                          bottom="0"
-                          w="full"
-                          py="4"
-                          px="2"
-                          bg={"rgba(0,0, 0, 0.7)"}
+                  <Link href="/information/aa" key={i}>
+                    <Box w="190px" h="230px" cursor={"pointer"}>
+                      <VStack alignItems={"flex-start"} w="full">
+                        <Box
+                          position={"relative"}
+                          bg="blue.400"
+                          rounded="sm"
+                          w="190px"
+                          h="230px"
+                          overflow="hidden"
                         >
-                          <Text fontWeight={600} fontSize="16" px="1">
-                            호미곶 해맞이 광장
-                          </Text>
-                          <Text fontSize="14" px="1">
-                            12:00 ~ 13:00
-                          </Text>
-                        </VStack>
-                      </Box>
-                    </VStack>
-                  </Box>
+                          <Image
+                            h="full"
+                            alt="image"
+                            objectFit={"cover"}
+                            src="https://images.unsplash.com/photo-1569949381669-ecf31ae8e613?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3570&q=80"
+                          />
+                          <VStack
+                            spacing="0"
+                            alignItems={"flex-start"}
+                            color="white"
+                            position="absolute"
+                            bottom="0"
+                            w="full"
+                            py="4"
+                            px="2"
+                            bg={"rgba(0,0, 0, 0.7)"}
+                          >
+                            <Text fontWeight={600} fontSize="16" px="1">
+                              호미곶 해맞이 광장
+                            </Text>
+                            <Text fontSize="14" px="1">
+                              12:00 ~ 13:00
+                            </Text>
+                          </VStack>
+                        </Box>
+                      </VStack>
+                    </Box>
+                  </Link>
                 ))}
             </Slider>
           </Box>
@@ -191,6 +193,9 @@ export default function Home() {
               ))}
           </VStack>
         </VStack>
+
+        {/* 하단 빈 박스 */}
+        <Box h="24" />
       </VStack>
     </Layout>
   );

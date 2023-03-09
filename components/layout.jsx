@@ -17,6 +17,14 @@ export default function Layout({
   children,
   Logo,
 }) {
+  const GNB = [
+    { name: "이벤트", href: "/", svg: SvgEvent },
+    { name: "이용안내", href: "/information", svg: SvgInfo },
+    { name: "홈", href: "/home", svg: SvgHome },
+    { name: "QR", href: "/qr", svg: SvgQr },
+    { name: "더보기", href: "/more", svg: SvgMore },
+  ];
+
   const router = useRouter();
   const pathname = router.pathname;
   const onClick = () => {
@@ -45,7 +53,7 @@ export default function Layout({
         ) : null}
         {Logo ? <Logo /> : title ? <span>{title}</span> : null}
       </HStack>
-      <Box pt={20} pb={24} w={DEVICE_WIDTH} bg="#3C415E" minH="100vh">
+      <Box pt={20} pb={0} w={DEVICE_WIDTH} bg="#3C415E" minH="100vh">
         {children}
       </Box>
       {hasTabBar ? (
@@ -60,62 +68,23 @@ export default function Layout({
           justifyContent="space-between"
         >
           <Grid templateColumns={"repeat(5, 1fr)"} w="full" borderTop={2}>
-            <Link href="/">
-              <GridItem cursor={"pointer"}>
-                <VStack alignItems={"center"}>
-                  <SvgEvent fill={pathname === "/" ? "#2A8CFF" : "#646B90"} />
-                  <Text
-                    fontWeight="600"
-                    color={pathname === "/" ? "#2A8CFF" : "#646B90"}
-                  >
-                    이벤트
-                  </Text>
-                </VStack>
-              </GridItem>
-            </Link>
-            <Link href="/information">
-              <GridItem cursor={"pointer"}>
-                <VStack alignItems={"center"}>
-                  <SvgInfo
-                    fill={pathname === "/information" ? "#2A8CFF" : "#646B90"}
-                  />
-                  <Text
-                    fontWeight="600"
-                    color={pathname === "/information" ? "#2A8CFF" : "#646B90"}
-                  >
-                    이용안내
-                  </Text>
-                </VStack>
-              </GridItem>
-            </Link>
-            <GridItem>
-              <VStack alignItems={"center"}>
-                <SvgHome fill="#646B90" />
-                <Text fontWeight="600" color="#646B90">
-                  홈
-                </Text>
-              </VStack>
-            </GridItem>
-            <Link href="/streaming">
-              <GridItem>
-                <VStack alignItems={"center"}>
-                  <SvgQr fill="#646B90" />
-                  <Text fontWeight="600" color="#646B90">
-                    QR
-                  </Text>
-                </VStack>
-              </GridItem>
-            </Link>
-            <Link href="/profile">
-              <GridItem>
-                <VStack alignItems={"center"}>
-                  <SvgMore fill="#646B90" />
-                  <Text fontWeight="600" color="#646B90">
-                    더보기
-                  </Text>
-                </VStack>
-              </GridItem>
-            </Link>
+            {GNB.map((item, index) => (
+              <Link href={item.href} key={index}>
+                <GridItem cursor={"pointer"}>
+                  <VStack alignItems={"center"}>
+                    <item.svg
+                      fill={pathname === item.href ? "#2A8CFF" : "#646B90"}
+                    />
+                    <Text
+                      fontWeight="600"
+                      color={pathname === item.href ? "#2A8CFF" : "#646B90"}
+                    >
+                      {item.name}
+                    </Text>
+                  </VStack>
+                </GridItem>
+              </Link>
+            ))}
           </Grid>
         </HStack>
       ) : null}

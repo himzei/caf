@@ -12,22 +12,24 @@
     "@chakra-ui/react": "^2.5.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@mui/material": "^5.11.12",
-    "@mui/styled-engine-sc": "^5.11.11",
     "@noonnu/pretendard-regular": "^0.1.0",
+    "@prisma/client": "^4.11.0",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "framer-motion": "^10.0.2",
     "next": "13.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.5",
     "react-icons": "^4.8.0",
+    "react-qr-scanner": "^1.0.0-alpha.11",
     "react-slick": "^0.29.0",
     "react-star-ratings": "^2.3.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.8"
   },
   "devDependencies": {
-    "@svgr/webpack": "^6.5.1"
+    "@svgr/webpack": "^6.5.1",
+    "prisma": "^4.11.0"
   }
 }
